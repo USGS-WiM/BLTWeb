@@ -120,7 +120,9 @@ namespace BLTWeb.Controllers
                 request.Resource = "Organizations/{organizationID}";
                 request.RootElement = "ORGANIZATION";
                 request.AddParameter("organizationID", loggedIn.ORGANIZATION_ID, ParameterType.UrlSegment);
-                ViewData["Organization"] = serviceCaller.Execute<ORGANIZATION>(request).NAME;
+                ORGANIZATION o = serviceCaller.Execute<ORGANIZATION>(request);
+                if (o != null)
+                    ViewData["Organization"] = o.NAME;                
             }
             if (loggedIn.DIVISION_ID != 0 && loggedIn.DIVISION_ID != null)
             {
@@ -128,7 +130,10 @@ namespace BLTWeb.Controllers
                 request.Resource = "Divisions/{divisionID}";
                 request.RootElement = "DIVISION";
                 request.AddParameter("divisionID", loggedIn.DIVISION_ID, ParameterType.UrlSegment);
-                ViewData["Division"] = serviceCaller.Execute<DIVISION>(request).DIVISION_NAME;
+                DIVISION d = serviceCaller.Execute<DIVISION>(request);
+                if (d != null)
+                    ViewData["Division"] = d.DIVISION_NAME;
+               
             }
             else
             {
@@ -426,7 +431,7 @@ namespace BLTWeb.Controllers
                     request.AddParameter("organizationID", creator.ORGANIZATION_ID, ParameterType.UrlSegment);
                     ORGANIZATION thisOrg = serviceCaller.Execute<ORGANIZATION>(request);
                     if (thisOrg != null)
-                        ViewData["creatorOrg"] = serviceCaller.Execute<ORGANIZATION>(request).NAME;
+                        ViewData["creatorOrg"] = thisOrg.NAME;
                 }
                 if (creator.DIVISION_ID != 0 && creator.DIVISION_ID != null)
                 {
@@ -457,7 +462,7 @@ namespace BLTWeb.Controllers
                     request.AddParameter("organizationID", publisher.ORGANIZATION_ID, ParameterType.UrlSegment);
                     ORGANIZATION pubOrg = serviceCaller.Execute<ORGANIZATION>(request);
                     if (pubOrg != null)
-                        ViewData["publisherOrg"] = serviceCaller.Execute<ORGANIZATION>(request).NAME;
+                        ViewData["publisherOrg"] = pubOrg.NAME;
                 }
                 if (publisher.DIVISION_ID != 0 && publisher.DIVISION_ID != null)
                 {
@@ -489,7 +494,7 @@ namespace BLTWeb.Controllers
                     request.AddParameter("organizationID", expirer.ORGANIZATION_ID, ParameterType.UrlSegment);
                     ORGANIZATION expOrg = serviceCaller.Execute<ORGANIZATION>(request);
                     if (expOrg != null)
-                        ViewData["expirerOrg"] = serviceCaller.Execute<ORGANIZATION>(request).NAME;
+                        ViewData["expirerOrg"] = expOrg.NAME;
                 }
                 if (expirer.DIVISION_ID != 0 && expirer.DIVISION_ID != null)
                 {
