@@ -11,7 +11,7 @@ Log in based data management application for Bulletins Live Two.
 
 ## Authors
 
-* **[Tonia Roddick](https://cms.usgs.gov/users/troddickusgsgov)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
+* **[Tonia Roddick](https://www.usgs.gov/staff-profiles/tonia-m-roddick)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
