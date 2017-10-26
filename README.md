@@ -19,17 +19,6 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the Creative Commons CC0 1.0 Universal License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Suggested Citation
-In the spirit of open source, please cite any re-use of the source code stored in this repository. Below is the suggested citation:
-
-`This project contains code produced by the Web Informatics and Mapping (WIM) team at the United States Geological Survey (USGS). As a work of the United States Government, this project is in the public domain within the United States. https://wim.usgs.gov`
-
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration Note 
-
 ## About WIM
 * This project authored by the [USGS WIM team](https://wim.usgs.gov)
 * WIM is a team of developers and technologists who build and manage tools, software, web services, and databases to support USGS science and other federal government cooperators.
